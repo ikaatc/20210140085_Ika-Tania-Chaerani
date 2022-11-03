@@ -86,5 +86,16 @@ namespace _20210140085_Ika_Tania_Chaerani
                 high--;
             }
         }
+        public void MergeSort(int[] j, int low, int high)
+        {
+            int mid;
+            if (high > low)
+            {
+                mid = (high + low) / 2;
+                MergeSort(j, , mid);
+                MergeSort(j, (mid + 1), high);
+                MainMerge(j, low, (mid + 1), high);
+            }
+        }
     }
 }
