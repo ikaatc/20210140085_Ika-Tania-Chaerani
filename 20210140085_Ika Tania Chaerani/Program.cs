@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -92,9 +93,45 @@ namespace _20210140085_Ika_Tania_Chaerani
             if (high > low)
             {
                 mid = (high + low) / 2;
-                MergeSort(j, , mid);
+                MergeSort(j, low, mid);
                 MergeSort(j, (mid + 1), high);
                 MainMerge(j, low, (mid + 1), high);
+            }
+        }
+        static void Main(string[] args)
+        {
+            program p = new program();
+            int pilihanmenu;
+
+            do
+            {
+                Console.WriteLine("Pilihan Menu");
+                Console.WriteLine("");
+                Console.WriteLine("1. Insertion Sort");
+                Console.WriteLine("2. Merge Sort");
+                Console.WriteLine("3. exit");
+                Console.Write("Enter your choice (1,2,3) : ");
+                pilihanmenu = Convert.ToInt32(Console.ReadLine());
+
+                switch(pilihanmenu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("Insertion Sort");
+                        p.input();
+                        p.InsertionSort();
+                        p.display();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("Merge Sort");
+                        p.input();
+                        p.display();
+                        break;
+                    case 3:
+                        Console.WriteLine("Exit");
+                        break;
+                }
             }
         }
     }
