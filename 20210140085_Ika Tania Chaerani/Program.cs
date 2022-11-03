@@ -52,5 +52,14 @@ namespace _20210140085_Ika_Tania_Chaerani
                 }
             }
         }
+        public void display()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Input array element");
+            for (int j = 0; j < n; j++)
+            {
+                Console.WriteLine(arr[j]);
+            }
+        }
     }
 }
