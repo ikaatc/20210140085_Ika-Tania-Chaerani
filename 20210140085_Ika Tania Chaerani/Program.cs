@@ -24,6 +24,16 @@ namespace _20210140085_Ika_Tania_Chaerani
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 33 elements.\n");
             }
+            Console.WriteLine("");
+            Console.WriteLine("-------------------");
+            Console.WriteLine("Enter Array Element");
+            Console.WriteLine("-------------------");
+            for (i = 0; i < n; i++)
+            {
+                Console.WriteLine("<" + (i + 1) + ">");
+                string s1 = Console.ReadLine();
+                arr[i] = int.Parse(s1);
+            }
         }
     }
 }
