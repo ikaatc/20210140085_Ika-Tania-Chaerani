@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,22 @@ namespace _20210140085_Ika_Tania_Chaerani
                 Console.WriteLine("<" + (i + 1) + ">");
                 string s1 = Console.ReadLine();
                 arr[i] = int.Parse(s1);
+            }
+        }
+        public void InsertionSort()
+        {
+            for (int i = 0; i < n; i++)
+            {
+                int key = arr[i];
+                int j = i - 1;
+                {
+                    while (j >= 0 && arr[j] > key)
+                    {
+                        arr[j + 1] = arr[j];
+                        j = j - 1;
+                    }
+                    arr[j + 1] = arr[j];
+                }
             }
         }
     }
