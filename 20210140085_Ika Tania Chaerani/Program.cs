@@ -113,7 +113,7 @@ namespace _20210140085_Ika_Tania_Chaerani
                 Console.Write("Enter your choice (1,2,3) : ");
                 pilihanmenu = Convert.ToInt32(Console.ReadLine());
 
-                switch(pilihanmenu)
+                switch (pilihanmenu)
                 {
                     case 1:
                         Console.WriteLine("");
@@ -132,7 +132,9 @@ namespace _20210140085_Ika_Tania_Chaerani
                         Console.WriteLine("Exit");
                         break;
                 }
-            }
+                Console.WriteLine("press return to exit");
+                Console.ReadLine();
+            } while (pilihanmenu != 3);
         }
     }
 }
