@@ -61,5 +61,30 @@ namespace _20210140085_Ika_Tania_Chaerani
                 Console.WriteLine(arr[j]);
             }
         }
+        static public void MainMerge(int[] j, int low, int mid, int high)
+        {
+            int[] arr = new int[33];
+            int i, a, b, c;
+            a = (mid - 1);
+            b = low;
+            c = (high - low + 1);
+
+            while ((low <= a) && (mid <= high))
+            {
+                if (j[low] <= j[mid])
+                    arr[c++] = j[low++];
+                else
+                    arr[c++] = j[mid++];
+            }
+            while (low <= a)
+                j[c++] = j[low++];
+            while (mid <= high)
+                j[c++] = j[mid++];
+            for (i = 0; i <= b; i++)
+            {
+                j[high] = arr[high];
+                high--;
+            }
+        }
     }
 }
